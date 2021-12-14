@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Event_time_Project.Models.Task>
+
+@{ ViewBag.Title = "Index"; }
+
+
+    <div layout:fragment="site_content">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-sm-3">
+
+
+                    <ul class="list-group">
+                        <li class="list-group-item info" aria-disabled="true">Admin</li>
+                        <li class="list-group-item">
+                            <a href="/Notifications">Notifications</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="/Organizations">Organizations</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="/Category_Task">Category</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="/Tasks">Tasks</a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <a href="/Events">Events</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="/Calendars">Calendars</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="/Users">Users</a>
+                        </li>
+
+                        <li class="list-group-item">
+                            <a href="/Schedule">Schedule</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-9">
+                    <h2>Home Page</h2>
+                    <div class="jumbotron">
+                        <h1>ASP.NET</h1>
+                        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+                        <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+                    </div>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                    <br />
+                    <br />
+                    <p>Demonstrate fadeIn() with different parameters.</p>
+
+                    <button>Click to fade in boxes</button><br><br>
+
+                    <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+                    <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+                    <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>

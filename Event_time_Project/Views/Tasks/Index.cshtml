@@ -1,0 +1,80 @@
+﻿@model IEnumerable<Event_time_Project.Models.Task>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Filterable Table</h2>
+<p>Type something in the input field to search the table for first names, last names or emails:</p>
+<input id="myInput" type="text" placeholder="Search..">
+<br>
+<br>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <thead>
+        <tr>
+            <th>Category Task</th>
+            <th>Notify Date</th>
+            <th>Task</th>
+            <th>Description</th>
+            <th>Deadline</th>
+            <th>Completed</th>
+            <th>Operations</th>
+        </tr>
+    </thead>
+    <tbody id="myTable">
+
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category_Task.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Notification.Notify_date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Task_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Deadline)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Completed)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Task_id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Task_id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Task_id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<br />
+<br />
+<div class="progress">
+    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+    <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+    <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+    <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="progress">
+    <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+</div>

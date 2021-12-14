@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Event_time_Project.Models.User>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Filterable Table</h2>
+<p>Type something in the input field to search the table for first names, last names or emails:</p>
+<input id="myInput" type="text" placeholder="Search..">
+<br>
+<br>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <thead>
+        <tr>
+            <th>Calendar</th>
+            <th>Subject</th>
+            <th>Task Name</th>
+            <th>Username</th>
+            <th>Surname</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Phone</th>
+            <th>Operations</th>
+        </tr>
+    </thead>
+    <tbody id="myTable">
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Calendar.Calendar_id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Event.Subject)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Task.Task_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.User_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Surname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Login)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.User_id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.User_id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.User_id })
+                </td>
+            </tr>
+        }
+
+</table>
